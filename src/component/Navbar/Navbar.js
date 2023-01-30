@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { ModeStateContext } from "./Contexts";
+import { ModeStateContext } from "../Contexts";
+import './Navbar.css';
 const Navbar = () => {
     const{theme,setTheme}=useContext(ModeStateContext);
     function toggleTheme() {
@@ -20,7 +21,7 @@ const Navbar = () => {
            <Link to={"/"}><h2>Movie Star</h2></Link>
            <div className="nav-list">
             <Link to="/"  ><ul>Home</ul></Link>
-            <Link to="/signin" ><ul>Register</ul></Link>
+            <Link to="/register" ><ul>Register</ul></Link>
       
             </div>
         </div>

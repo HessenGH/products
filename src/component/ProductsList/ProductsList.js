@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import './ProductsList.css'
 const MoviesList = ({movies}) => {
     const [search,setSearch]=useState('');
     const [category,setCategory]=useState('All');

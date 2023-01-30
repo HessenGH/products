@@ -1,0 +1,53 @@
+
+  .form-container {
+    border-radius: 10px;
+    max-width: 200px;
+    padding: 30px;
+  }
+  .close-form{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  .navbar{
+    background-color: #d4dcdc;
+    padding: 0px 10px;
+    display: flex; 
+    border-bottom: 1px solid black;
+    align-items: center;
+  }
+  .navbar a{
+    color: rgb(22, 19, 19);
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bolder;
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .nav-list{
+    margin-left: auto;
+    display: flex;
+  }
+  .form-popup {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(204, 186, 186);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+  }
+  
+
+  
+@media only screen and (max-width: 600px) {
+    .navbar a{
+        font-size:  large;
+          padding: 4px;
+          margin-left: 3px;
+      }
+  }
+  

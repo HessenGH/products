@@ -1,9 +1,9 @@
 
-import Home from "./component/Home";
-import Navbar from "./component/Navbar";
+import Home from "./component/Home/Home";
+import Navbar from "./component/Navbar/Navbar";
 import { BrowserRouter as Router,Route,Switch } from "react-router-dom";
-import MovieDetails from "./component/MovieDetails";
-import SignIn from "./component/Signin";
+import MovieDetails from "./component/ProductDetails/ProductDetails";
+import Register from "./component/Register/Register";
 import { ModeStateContext } from "./component/Contexts";
 import { useState } from "react";
 function App() {
@@ -23,8 +23,8 @@ function App() {
         <Route exact path="/">
         <Home/>
         </Route>
-        <Route path="/signin">
-        <SignIn/>
+        <Route path="/register">
+        <Register/>
         </Route>
         <Route path="/movies/:id">
           <MovieDetails/>       

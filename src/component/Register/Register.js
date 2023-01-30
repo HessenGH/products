@@ -1,5 +1,7 @@
 import { useState } from "react";
-function SignIn(){
+import './Register.css';
+
+function Register(){
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
     const [passwordType, setPasswordType] = useState("password");
@@ -71,4 +73,4 @@ function SignIn(){
       </div>
     )
 }
-export default SignIn;
+export default Register;

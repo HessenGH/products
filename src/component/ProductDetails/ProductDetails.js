@@ -1,6 +1,6 @@
 import { useHistory,useParams } from "react-router-dom";
-import useFetch from "./useFetch";
-
+import useFetch from "../useFetch";
+import './ProductDetails.css'
 const MovieDetails = () => {
     const{id} =useParams();
     const {data:product}=useFetch('https://fakestoreapi.com/products/'+id);
