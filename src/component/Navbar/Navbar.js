@@ -18,10 +18,10 @@ const Navbar = () => {
         <div>
         <div className="navbar" >
         <img src="icons/Menu.png" onClick={openNav}/>
-           <Link to={"/"}><h2>Movie Star</h2></Link>
+           <Link to={"/"}><h2 className="title-nav">Movie Star</h2></Link>
            <div className="nav-list">
-            <Link to="/"  ><ul>Home</ul></Link>
-            <Link to="/register" ><ul>Register</ul></Link>
+            <Link to="/"  >Home</Link>
+            <Link to="/register" >Register</Link>
       
             </div>
         </div>
