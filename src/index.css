@@ -13,7 +13,6 @@ body{
   padding: 0px;
   background-color:var(--bg-color);
   color: var(--text-color);
-  /* background-image: url('../images/avatar.jpg'); */
   background-size:cover ;
   /* zoom: 125%; */
 }
@@ -33,52 +32,3 @@ body{
 
 
 
-
-
-@media only screen and (max-width: 600px) {
-  body {
-    /* background-color: lightblue; */
-  }
-  .movie-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .movie-preview{
-    max-width: 300px;
-  }
-  .movie-preview img{
-    width: 250px;
-    height: 300px;
-  }
-
-  .product-details-d {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    }
-  .product-details-d img{
-    width:250px;
-    /* border-radius: 20px; */
-  }
-  .product-details-other h2{
-    text-transform: uppercase;
-  }
-  
-  .product-details-other p{
-    font-size: large;
-  }
-  .product-details-d h3{
-  margin: 3px;
-  font-weight: bolder;
-  font-size: medium;
-  }
-
-  .product-details-d h1{
-    margin: 3px;
-    font-weight: bolder;
-    font-size: medium;
-    }
-}
