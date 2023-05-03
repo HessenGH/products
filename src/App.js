@@ -1,4 +1,3 @@
-
 import Home from "./component/Home/Home";
 import Navbar from "./component/Navbar/Navbar";
 import { BrowserRouter as Router,Route,Switch } from "react-router-dom";
@@ -6,6 +5,7 @@ import MovieDetails from "./component/ProductDetails/ProductDetails";
 import Register from "./component/Register/Register";
 import { ModeStateContext } from "./component/Contexts";
 import { useState } from "react";
+import Footer from "./component/Footer/Footer";
 function App() {
   const [theme, setTheme] = useState("light");
  
@@ -29,7 +29,10 @@ function App() {
         <Route path="/movies/:id">
           <MovieDetails/>       
         </Route>
+       
         </Switch>
+          {/* <Footer/>        */}
+
         </div>
     </div>
     </ModeStateContext.Provider>

@@ -4,21 +4,21 @@ import { ModeStateContext } from "../Contexts";
 import './Navbar.css';
 const Navbar = () => {
     const{theme,setTheme}=useContext(ModeStateContext);
-    function toggleTheme() {
+    const toggleTheme=()=> {
         setTheme(theme === "light" ? "dark" : "light");
     }
-      function openNav() {
+      const openNav=()=> {
         document.getElementById("myForm").style.width = "200px";
       }
       
-      function closeNav() {
+      const closeNav=()=> {
         document.getElementById("myForm").style.width = "0";
       }
     return ( 
         <div>
         <div className="navbar" >
-        <img src="icons/Menu.png" onClick={openNav}/>
-           <Link to={"/"}><h2 className="title-nav">Movie Star</h2></Link>
+        {/* <img src="icons/Menu.png" onClick={openNav}/> */}
+           <Link to={"/"}><h2 className="title-nav">GH Store</h2></Link>
            <div className="nav-list">
             <Link to="/"  >Home</Link>
             <Link to="/register" >Register</Link>
@@ -26,7 +26,7 @@ const Navbar = () => {
             </div>
         </div>
 
-        <div class="form-popup" id="myForm">
+        {/* <div class="form-popup" id="myForm">
         <div class="form-container">
           <h1>Register</h1>
           <img src="icons/close.png" onClick={closeNav} className="close-form"/>
@@ -34,7 +34,7 @@ const Navbar = () => {
           <h3>Contact-Us</h3>
           <img src="icons/Dark-Mode.png" onClick={toggleTheme}/>
            </div>
-      </div>
+      </div> */}
       </div>
      );
 }

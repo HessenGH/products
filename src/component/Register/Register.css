@@ -5,7 +5,6 @@
     display: flex;
     justify-content: center;
     position: relative;
-    
   }
   .form label{
     text-align: left;
@@ -60,10 +59,11 @@
   .form-box{
     display: flex;
     justify-content: center;
+    margin-bottom: 150px;
   }
   .form{
     margin:auto;
-    width: 60%;
+    width: 50%;
     position: relative;
     top: 100px;
     text-align: center;

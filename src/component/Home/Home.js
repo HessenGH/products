@@ -1,3 +1,4 @@
+import Loading from "../Loading/Loading";
 import ProductsList from "../ProductsList/ProductsList";
 import useFetch from "../useFetch";
 import './Home.css'
@@ -5,10 +6,12 @@ const Home = () => {
   
     const {data,error,isPending}=useFetch('https://fakestoreapi.com/products')
     return ( 
-        <div>
+        <div className="home">
                 {error && <div>{error}</div>}
-                {isPending && <img src="icons/hourglass.png" className="refresh" alt="loading..."/> }
-               {data && <ProductsList movies={data} /> }
+                {isPending && <Loading/>}
+               {data &&
+                <ProductsList products={data} />
+                }
         </div>
      );
 }

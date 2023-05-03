@@ -1,18 +1,22 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Footer from "../Footer/Footer";
 import './ProductsList.css'
-const MoviesList = ({movies}) => {
+import Slider from "../Slider/Slider";
+const MoviesList = ({products}) => {
     const [search,setSearch]=useState('');
     const [category,setCategory]=useState('All');
     return ( 
         <div>
+{/* <Slider/> */}
+     
             <div className="filter">
                 <select  id="category" className="select" onChange={(e)=>setCategory(e.target.value)}>
                     <option value="All">All</option>
-                    <option value="men's clothing">men's clothing</option>
-                    <option value="women's clothing">women's clothing</option>
-                    <option value="jewelery">jewelery</option>
-                    <option value="electronics">electronics</option>
+                    <option value="men's clothing">Men's Clothing</option>
+                    <option value="women's clothing">Women's Clothing</option>
+                    <option value="jewelery">Jewelery</option>
+                    <option value="electronics">Electronics</option>
                 </select>
              <input 
              className="serach"
@@ -23,7 +27,7 @@ const MoviesList = ({movies}) => {
             />
             </div>
         <div className="movie-list">
-            {movies.filter((item)=>{
+            {products.filter((item)=>{
                 return search.toLowerCase()===''
                 ? item
                 :item.title.toLowerCase().includes(search);
@@ -38,10 +42,12 @@ const MoviesList = ({movies}) => {
                 <Link to={`/movies/${movie.id}`}>
                 <img src={movie.image} alt="movie" className="img-product"/>
                 <h3 className="title">{movie.title}</h3>
+                <h4 className="price">{movie.price}$</h4>
                 </Link>
                 </div>
             ))}
         </div>
+        <Footer/>
         </div>
      );
 }

@@ -1,0 +1,15 @@
+.btn{
+    text-align: center;
+}
+.button{
+    padding: 7px;
+    margin: 7px;
+    font-weight: 600;
+    font-size: medium;
+    width: 200px;
+}
+.img{
+    width: 90%;
+    /* height: 700px; */
+    /* object-fit: unset; */
+}

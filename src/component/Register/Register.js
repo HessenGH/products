@@ -2,7 +2,7 @@ import { useState } from "react";
 import './Register.css';
 
 function Register(){
-  const [password, setPassword] = useState('');
+  // const [password, setPassword] = useState('');
   const [error, setError] = useState('');
     const [passwordType, setPasswordType] = useState("password");
     const [confirmpasswordType, setConfirmpasswordType] = useState("password");
@@ -18,16 +18,16 @@ function Register(){
   
       if (!passwordInput.match(upperCase) || !passwordInput.match(lowerCase) || !passwordInput.match(symbol) || !passwordInput.match(number)) {
         setError('Password must contain at least one uppercase letter, one lowercase letter, one symbol and one number');
-      } else {
+      } else{
         setError('');
       }
     }
 
-    const handlePasswordChange =(evnt)=>{
-        setPasswordInput(evnt.target.value);
+    const handlePasswordChange =(event)=>{
+        setPasswordInput(event.target.value);
     }
-    const handlePasswordChange1=(evnt)=>{
-        setConfirmPasswordInput(evnt.target.value);
+    const handlePasswordChange1=(event)=>{
+        setConfirmPasswordInput(event.target.value);
     }
     const togglePassword =()=>{
       if(passwordType==="password")
@@ -58,13 +58,27 @@ function Register(){
         <label for="pass">password</label>
         <div className="input">
         
-        <input type={passwordType} onChange={handlePasswordChange} required value={passwordInput} name="password" placeholder="Password" className="input-password" id="pass"/>
-        { passwordType==="password"? <img src="icons/openeye.png" onClick={togglePassword} className="eye"/> :<img src="icons/closeeye.png" onClick={togglePassword} className="eye"/> }
+        <input 
+        type={passwordType} 
+        onChange={handlePasswordChange} 
+        required value={passwordInput} 
+        name="password" 
+        placeholder="Password" 
+        className="input-password" 
+        id="pass"/>
+        { passwordType==="password"? 
+        <img src="icons/openeye.png" onClick={togglePassword} className="eye"/> :<img src="icons/closeeye.png" onClick={togglePassword} className="eye"/> }
         </div>
         <label for="confpass"> confirm password</label>
         <div className="input">
         
-        <input type={confirmpasswordType} onChange={handlePasswordChange1} required value={confirmpasswordInput} name="password" placeholder="Password" className="input-password" id="confpass"/>
+        <input 
+        type={confirmpasswordType} 
+        onChange={handlePasswordChange1} 
+        required value={confirmpasswordInput} 
+        name="password" placeholder="Password" 
+        className="input-password" 
+        id="confpass"/>
         { confirmpasswordType==="password"? <img src="icons/openeye1.png" onClick={togglePassword1} className="eye"/> :<img src="icons/closeeye1.png" onClick={togglePassword1} className="eye"/> }
         </div>
         <input type="submit" value="Register" onClick={handleChange}/>

@@ -1,5 +1,5 @@
-.span{
-    border-bottom: 1px solid black;
+.product-details {
+ padding: 20px;
   }
   .product-details-d {
   text-align: center;
@@ -8,9 +8,12 @@
   justify-content: space-around;
   }
   .product-details-other{
-    margin-left: 20px;
-    
+    margin-left: auto;
+    padding: 20px;
     text-align: left;
+  }
+  .span{
+    border-bottom: 1px solid black;
   }
   .fas{
     color: yellowgreen;

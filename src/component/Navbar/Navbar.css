@@ -4,16 +4,24 @@
     background-color: #d4dcdc;
     padding: 0px 10px;
     display: flex; 
+    
     border-bottom: 1px solid black;
     align-items: center;
   }
+  .title-nav{
+    font-size: large;
+    padding-left: 3px;
+    font-weight: bold;
+   font-family: Solitreo;
+    font-size: large;
+}
+
   .navbar a{
     color: rgb(22, 19, 19);
     text-decoration: none;
     font-size: larger;
     font-weight: bolder;
-    /* display: inline-block; */
-    margin-left: 5px;
+    margin-left: 15px;
   }
   .nav-list{
     margin-left: auto;
@@ -28,7 +36,6 @@
     left: 0;
     background-color: rgb(204, 186, 186);
     overflow-x: hidden;
-    transition: 0.5s;
     padding-top: 40px;
   }
   .form-container {
@@ -45,12 +52,7 @@
 
   
 @media only screen and (max-width: 600px) {
-  .title-nav{
-    font-size: large;
-    padding-left: 3px;
-    font-weight: bold;
-    /* color:white; */
-}
+ 
     .navbar a{
       font-size:  medium;
       padding: 4px;
